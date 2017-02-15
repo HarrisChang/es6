@@ -1,22 +1,22 @@
-/**
- * Created by admin on 2017/2/15.
- */
+var path = require("path");
 module.exports = {
-    entry: __dirname + '/app/main.js',  //惟一入口文件
-    output: {
-        path: __dirname + '/public',  //打包后的文件存放的地方
-        filename: 'bundle.js'  //打包后输出文件的文件名
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015']
-                }
-            }
-        ]
-    }
+	entry: "./src/main.js",  //入口文件
+	output: {  //打包输出的文件
+		path: __dirname,
+		filename: "bundle.js"
+	},
+	module: {
+		loader: [
+			{
+				test: path.join(__dirname, 'es6'),
+				loader: 'babel-loader',
+				query: {
+					presets: ['es2015']
+				}
+			}
+		]
+	},
+	resolve: {  //现在你require文件的时候可以直接使用require('file'),不用使用require('file.coffee')
+		extensions: ['', '.js', '.json', '.coffee']
+	}
 }
