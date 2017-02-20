@@ -1,22 +1,29 @@
 {
-  "name": "es6study",
+  "name": "es6",
   "version": "1.0.0",
-  "description": "a repo studying es6",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel": "babel --preset es2015 js/main.js -o build/main.bundle.js",
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HarrisChang/es6.git"
   },
   "keywords": [
-    "study"
+    "es6"
   ],
   "author": "harris",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HarrisChang/es6/issues"
   },
-  "homepage": "https://github.com/HarrisChang/es6#readme"
+  "homepage": "https://github.com/HarrisChang/es6#readme",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
+    "http-server": "^0.9.0"
+  }
 }
