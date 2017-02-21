@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>02 变量的解构赋值</title>
+</head>
+<body>
+<script>
+    /*1.数组的解构赋值*/
+        //1.1ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值
+        /*let [a, b, c] = [1, 2, 3];
+        let [foo, [[bar], baz]] = [1, [[2], 3]];
+        let [, , third] = ['foo', 'bar', 'baz'];
+        let [x, ,z] = [1, 2, 3];*/
+
+        //1.2默认值：解构赋值允许指定默认值
+        /*let [foo = true] = [];
+        foo  //true
+        let [x, y = 'b'] = ['a', undefined];
+
+        let [x = 1] = [undefined];
+        x // 1
+        let [x = 1] = [null];
+        x // null  //如果一个数组成员不严格等于undefined，默认值是不会生效的
+        */
+
+    /*2.对象的解构赋值*/
+        let {a:b} = {a:"aaa", b:"bbb"};
+
+</script>
+</body>
+</html>
